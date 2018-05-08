@@ -1,0 +1,26 @@
+[core]
+	autocrlf = input
+	pager = less -FRSX
+	excludesfile = /home/yulong/.gitignore_global
+	editor = kate
+[user]
+	name = Yulong Bai
+	email = yulong.bai@qt.io
+[commit]
+	template = ssh://codereview.qt-project.org/qt/qt5/.commit-template
+[status]
+	showuntrackedfiles = all
+[push]
+	default = tracking
+[rerere]
+	enabled = true
+	autoupdate = true
+[rebase]
+	stat = true
+[color]
+	ui = auto
+[alias]
+	ss = status
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	ba = branch -a
+	lgme  = !UN=$(git config user.name)&& git log --author="\"$UN\"" --pretty=format:'%h %cd %s' --date=short
